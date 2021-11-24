@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 .welcome-page {
     text-align: center;
     color: #1976d2;
+    font-family: 'Ubuntu', sans-serif;
 }
