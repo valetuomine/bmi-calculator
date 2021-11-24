@@ -1,49 +1,50 @@
 .header {
     text-align: center;
+    margin-top: auto;
     height: 40px;
-    left: 10px;
-    top: 10px;
     color: #1976d2;
 }
 
 .height-text {
     text-align: center;
-    height: 50px;
-    width: 290px;
-    left: 370%;
-    top: 10px;
+    height: 55px;
+    width: 330px;
     color: #1976d2;
+    
 }
 
 .weight-text {
     text-align: center;
-    height: 50px;
-    width: 290px;
-    left: 370%;
-    top: 10px;
+    height: 55px;
+    width: 330px;
+    top: 1px;
     color: #1976d2;
 }
 
 .bmi-text {
-    padding-top: 50px;
+    padding-top: 65px;
     text-align: center;
     color: #1976d2;
-    padding-right: 14px;
 }
 
 .health-text {
     padding-top: 0px;
     text-align: center;
     color: #1976d2;
-    padding-right: 14px;
 }
 
 .calculate {
     text-align: center;
     height: 40px;
-    width: 120px;
-    left: 895px;
+    width: 190px;
     top: 40px;
     color: #1976d2;
+}
+
+.bmi-calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 

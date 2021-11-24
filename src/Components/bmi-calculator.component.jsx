@@ -35,7 +35,7 @@ const BmiCalculator = () => {
         var values = (
             [Number(weight) / Number(height) / Number(height)] * 10000
         ).toFixed(2);
-        setBmi(values);
+        setBmi(isNaN(values) ? errorText : values);
         console.log(values);  
         
         if (values < 15) {
@@ -65,9 +65,6 @@ const BmiCalculator = () => {
             <Box
                 className='box' 
                 component="form"
-                sx={{
-                    '& > :not(style)': { m: 1, width: '25ch' },
-                }}
                 noValidate
                 autoComplete="off">
             <div className='height'>
@@ -104,6 +101,7 @@ const BmiCalculator = () => {
                 {calculateText}
             </Button>
             </Stack>
+            
             
             {bmi && (
                 <div className='values'>
