@@ -10,6 +10,7 @@ const WelcomePage = () => {
     return(
         <div className='welcome-page'>
             <h1>{welcomeText}</h1>
+            <h1>Testiteksti</h1>
         </div>
     );
 };
