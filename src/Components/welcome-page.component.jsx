@@ -10,7 +10,6 @@ const WelcomePage = () => {
     return(
         <div className='welcome-page'>
             <h1>{welcomeText}</h1>
-            <h2>Testi</h2>
         </div>
     );
 };
