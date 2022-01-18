@@ -14,6 +14,7 @@ const yourBmiText = 'Painoindeksi: ';
 const yourHealthyText = 'Terveydentilasi: ';
 const errorText = 'Virheellinen arvo, yritä uudelleen!';
 const welcomeText = 'Tervetuloa!'
+const clearText = 'Tyhjennä'
 
 export {
     sickUnderText,
@@ -31,7 +32,8 @@ export {
     yourBmiText,
     yourHealthyText,
     errorText,
-    welcomeText
+    welcomeText,
+    clearText
 };
 
 

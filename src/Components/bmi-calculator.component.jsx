@@ -22,7 +22,8 @@ import {
     calculateText,
     yourBmiText,
     yourHealthyText,
-    errorText
+    errorText,
+    clearText
 } from '../Texts/texts.js';
 
 const BmiCalculator = () => {
@@ -36,8 +37,10 @@ const BmiCalculator = () => {
             [Number(weight) / Number(height) / Number(height)] * 10000
         ).toFixed(2);
         setBmi(isNaN(values) ? errorText : values);
+        console.log(height); 
+        console.log(weight);
         console.log(values);  
-        
+
         if (values < 15) {
             setHealth(sickUnderText);
         } else if (values >= 15 && values <= 17.99) {
@@ -73,7 +76,7 @@ const BmiCalculator = () => {
                     id="standard-basic" 
                     label={giveHeightText}
                     variant="standard"
-                    onChange={(event) => setHeight(event.target.value)}
+                    onChange={(eventHeight) => setHeight(eventHeight.target.value)}
                     type='number' 
                     className='height-text' 
                     min='1'
@@ -85,14 +88,14 @@ const BmiCalculator = () => {
                     id="standard-basic" 
                     label={giveWeightText}
                     variant="standard"
-                    onChange={(event) => setWeight(event.target.value)}
+                    onChange={(eventWeight) => setWeight(eventWeight.target.value)}
                     type='number'
                     className='weight-text' 
                     min='1'
                 />
             </div>
             </Box>
-            <Stack direction="row" spacing={2}>
+            <Stack spacing={2.5}>
             <Button
                 className="calculate"
                 variant="contained"
@@ -100,7 +103,16 @@ const BmiCalculator = () => {
                 onClick={calculateBmi}>
                 {calculateText}
             </Button>
+            
+            <Button
+                className="refreshPage"
+                variant="contained"
+                type='submit'
+                onClick={() => window.location.reload(false)}>
+                {clearText}
+            </Button>
             </Stack>
+            
             
             
             {bmi && (
@@ -109,6 +121,9 @@ const BmiCalculator = () => {
                     <h3 className='health-text'> {yourHealthyText} <br/> {health} </h3>
                 </div>
             )}
+
+            
+            
         
         </div>
     );
